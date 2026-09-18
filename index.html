@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jornada Mágica | Kit de Jornada Terapêutica</title>
+  <title>Jornada Mágica | Kit de Jornada Terapêutica — V2</title>
   <meta name="description" content="Jornada Mágica — uma solução lúdica para apoiar crianças durante a hospitalização.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
+    /* =========================================================
+       V2 — ÁREA FÁCIL DE EDITAR
+       Para mudar cores, altere somente os valores abaixo.
+       ========================================================= */
     :root{
       --cream:#fffaf3; --paper:#ffffff; --ink:#24323a; --muted:#68777d;
       --orange:#f47c55; --orange-dark:#d95e3a; --peach:#ffe1d5;
@@ -90,6 +94,14 @@
     .hospital-copy h2{font-size:44px}.hospital-copy p{color:var(--muted);font-size:17px;margin:18px 0}.bullets{display:grid;gap:10px;margin-bottom:25px}.bullets div{font-weight:700}.bullets span{color:var(--orange-dark);margin-right:8px}
     .cta{padding:75px 0}.cta-box{background:var(--orange);color:white;border-radius:32px;padding:50px;display:flex;justify-content:space-between;gap:30px;align-items:center}.cta-box h2{font-size:42px;max-width:650px}.cta-box p{opacity:.9;margin-top:10px}.cta-box .btn{background:white;color:var(--orange-dark)}
     footer{border-top:1px solid var(--line);padding:30px 0;color:#718087;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .product-card{cursor:pointer;transition:.2s}
+    .product-card:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(70,55,45,.10)}
+    .product-link{display:inline-flex;margin-top:15px;color:var(--orange-dark);font-weight:900;font-size:13px;align-items:center;gap:6px}
+    .detail-grid{display:grid;grid-template-columns:130px 1fr;gap:18px;align-items:start;margin-bottom:20px}
+    .detail-art{height:130px;border-radius:22px;display:grid;place-items:center;font-size:58px}
+    .detail-list{display:grid;gap:9px;margin-top:12px}
+    .detail-list div{font-size:13px;color:var(--muted)}
+    .detail-list strong{color:var(--ink)}
     .modal{position:fixed;inset:0;background:rgba(34,40,43,.48);display:none;place-items:center;padding:20px;z-index:50}.modal.open{display:grid}.modal-card{background:white;width:min(520px,100%);border-radius:26px;padding:28px;position:relative}.close{position:absolute;right:18px;top:15px;border:0;background:#f4eee8;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:20px}.modal-card h2{font-size:30px;margin-bottom:7px}.modal-card p{color:var(--muted);font-size:14px;margin-bottom:20px}.form{display:grid;gap:13px}.form label{font-size:12px;font-weight:900}.form input,.form textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:13px;outline:none}.form input:focus,.form textarea:focus{border-color:var(--orange)}.form textarea{min-height:95px;resize:vertical}.success{display:none;background:#edf8f0;border:1px solid #cfe8d6;color:#326d45;padding:14px;border-radius:14px;font-weight:700;margin-top:12px}
     @media(max-width:900px){.navlinks{display:none}.menu{display:block}.hero-grid,.purpose-grid,.hospital-grid{grid-template-columns:1fr}.visual{min-height:430px}.steps{grid-template-columns:repeat(2,1fr)}.kit-grid{grid-template-columns:1fr}.hospital-copy{order:-1}}
     @media(max-width:620px){nav{height:68px}.nav-actions .btn-outline{display:none}.hero{padding:55px 0}.hero-copy{font-size:17px}.visual{min-height:370px}.box{right:2%;width:88%;padding:16px}.box-top{height:190px}.box-title{font-size:28px}.rocket{font-size:60px}.float-one{left:0}.float-two{right:0}.float-three{left:0}.steps{grid-template-columns:1fr}.purpose-item{grid-template-columns:44px 1fr}.purpose-icon{width:44px;height:44px;font-size:23px}.hospital-copy h2,.cta-box h2{font-size:33px}.cta-box{padding:32px 25px;display:block}.cta-box .btn{margin-top:22px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
@@ -121,7 +133,7 @@
         <h1>Cada etapa pode virar uma <span>conquista.</span></h1>
         <p class="hero-copy">Uma solução lúdica pensada para apoiar crianças de 3 a 13 anos durante a hospitalização, aproximando brincadeira, comunicação e cuidado.</p>
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="#kit">Conheça o kit ↓</a>
+          <a class="btn btn-primary" href="produtos.html">Conheça o Kit →</a>
           <button class="btn btn-outline" type="button" data-open-modal="demo">Quero uma demonstração</button>
         </div>
         <div class="trust"><span>🧸 Faixa etária: 3–13 anos</span><span>🏥 Desenvolvido para instituições de saúde</span></div>
@@ -166,9 +178,9 @@
         <p>Cada componente foi pensado para ter uma função clara dentro da experiência, respeitando as necessidades e a faixa etária da criança.</p>
       </div>
       <div class="kit-grid">
-        <article class="product-card"><div class="product-art art-peach">🗺️</div><div class="product-body"><div class="tag">01 · Jornada</div><h3>Tabuleiro de Progresso</h3><p>Mapa visual com etapas e espaços para acompanhar a jornada de forma concreta e compreensível.</p></div></article>
-        <article class="product-card"><div class="product-art art-mint">🧸</div><div class="product-body"><div class="tag">02 · Coleção</div><h3>Mascotes e Tokens 3D</h3><p>Peças manipuláveis e colecionáveis que podem ser encaixadas, organizadas e usadas na narrativa.</p></div></article>
-        <article class="product-card"><div class="product-art art-blue">💬</div><div class="product-body"><div class="tag">03 · Comunicação</div><h3>Baralho de Comunicação</h3><p>Cartas para apoiar a expressão de sentimentos, dúvidas, preferências e necessidades.</p></div></article>
+        <article class="product-card" data-product="board" tabindex="0" role="button" aria-label="Ver detalhes do Tabuleiro de Progresso"><div class="product-art art-peach">🗺️</div><div class="product-body"><div class="tag">01 · Jornada</div><h3>Tabuleiro de Progresso</h3><p>Mapa visual com etapas e espaços para acompanhar a jornada de forma concreta e compreensível.</p><span class="product-link">Ver detalhes →</span></div></article>
+        <article class="product-card" data-product="tokens" tabindex="0" role="button" aria-label="Ver detalhes dos Mascotes e Tokens 3D"><div class="product-art art-mint">🧸</div><div class="product-body"><div class="tag">02 · Coleção</div><h3>Mascotes e Tokens 3D</h3><p>Peças manipuláveis e colecionáveis que podem ser encaixadas, organizadas e usadas na narrativa.</p><span class="product-link">Ver detalhes →</span></div></article>
+        <article class="product-card" data-product="cards" tabindex="0" role="button" aria-label="Ver detalhes do Baralho de Comunicação"><div class="product-art art-blue">💬</div><div class="product-body"><div class="tag">03 · Comunicação</div><h3>Baralho de Comunicação</h3><p>Cartas para apoiar a expressão de sentimentos, dúvidas, preferências e necessidades.</p><span class="product-link">Ver detalhes →</span></div></article>
       </div>
     </div>
   </section>
@@ -227,8 +239,25 @@
 </main>
 
 <footer>
-  <div class="container footer-inner"><strong>✦ Jornada Mágica</strong><span>Kit de Jornada Terapêutica · Projeto conceitual V1</span></div>
+  <div class="container footer-inner"><strong>✦ Jornada Mágica</strong><span>Kit de Jornada Terapêutica · Projeto conceitual V2</span></div>
 </footer>
+
+
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productTitle">
+  <div class="modal-card">
+    <button class="close" type="button" data-close-modal aria-label="Fechar">×</button>
+    <div class="detail-grid">
+      <div class="detail-art" id="productArt">🗺️</div>
+      <div>
+        <div class="tag" id="productTag">01 · Jornada</div>
+        <h2 id="productTitle">Tabuleiro de Progresso</h2>
+        <p id="productDescription">Mapa visual da jornada.</p>
+      </div>
+    </div>
+    <div class="detail-list" id="productDetails"></div>
+    <button class="btn btn-primary" type="button" data-open-modal="demo">Quero conhecer o kit →</button>
+  </div>
+</div>
 
 <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
   <div class="modal-card">
@@ -264,31 +293,132 @@
 (function(){
   const demoModal = document.getElementById('demoModal');
   const loginModal = document.getElementById('loginModal');
-  const modals = [demoModal, loginModal];
-  function openModal(modal){ modal.classList.add('open'); const first=modal.querySelector('input'); if(first) setTimeout(()=>first.focus(),50); }
-  function closeModal(modal){ modal.classList.remove('open'); }
+  const productModal = document.getElementById('productModal');
+  const modals = [demoModal, loginModal, productModal];
+
+  const products = {
+    board: {
+      art: '🗺️', artClass: 'art-peach', tag: '01 · Jornada',
+      title: 'Tabuleiro de Progresso',
+      description: 'Um mapa visual que transforma etapas do cuidado em uma jornada compreensível e acompanhável.',
+      details: [
+        '<strong>Estimula:</strong> atenção, sequência, percepção espacial e compreensão da rotina.',
+        '<strong>Como usar:</strong> a equipe apresenta a etapa atual e a criança movimenta seu marcador ao longo da jornada.',
+        '<strong>Faixa etária:</strong> 3–13 anos, com complexidade adaptada.'
+      ]
+    },
+    tokens: {
+      art: '🧸', artClass: 'art-mint', tag: '02 · Coleção',
+      title: 'Mascotes e Tokens 3D',
+      description: 'Peças colecionáveis que representam conquistas e podem ser usadas no tabuleiro ou em atividades.',
+      details: [
+        '<strong>Estimula:</strong> motricidade fina, coordenação óculo-manual, percepção espacial e criatividade.',
+        '<strong>Como usar:</strong> entregar, encaixar, organizar ou personalizar os tokens conforme as atividades realizadas.',
+        '<strong>Faixa etária:</strong> 3–13 anos, com desafios adequados à idade.'
+      ]
+    },
+    cards: {
+      art: '💬', artClass: 'art-blue', tag: '03 · Comunicação',
+      title: 'Baralho de Comunicação',
+      description: 'Cartas que ajudam a criança a expressar sentimentos, dúvidas, preferências e necessidades.',
+      details: [
+        '<strong>Estimula:</strong> comunicação, reconhecimento emocional, interação e participação no cuidado.',
+        '<strong>Como usar:</strong> escolher cartas durante conversas, procedimentos ou momentos de acolhimento.',
+        '<strong>Faixa etária:</strong> 3–13 anos, com linguagem e imagens adaptadas.'
+      ]
+    }
+  };
+
+  function openModal(modal){
+    if(!modal) return;
+    modal.classList.add('open');
+    const first = modal.querySelector('input');
+    if(first) setTimeout(()=>first.focus(),50);
+  }
+
+  function closeModal(modal){
+    if(modal) modal.classList.remove('open');
+  }
+
   document.querySelectorAll('[data-open-modal]').forEach(btn=>{
-    btn.addEventListener('click',()=>openModal(btn.dataset.openModal==='login'?loginModal:demoModal));
+    btn.addEventListener('click',()=>{
+      const target = btn.dataset.openModal;
+      openModal(target === 'login' ? loginModal : target === 'product' ? productModal : demoModal);
+    });
   });
+
   document.querySelectorAll('[data-close-modal]').forEach(btn=>{
     btn.addEventListener('click',()=>closeModal(btn.closest('.modal')));
   });
-  modals.forEach(m=>m.addEventListener('click',e=>{if(e.target===m) closeModal(m)}));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape') modals.forEach(closeModal)});
+
+  modals.forEach(m=>{
+    m.addEventListener('click',e=>{ if(e.target===m) closeModal(m); });
+  });
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') modals.forEach(closeModal);
+  });
+
+  function showProduct(key){
+    const p = products[key];
+    if(!p) return;
+    const art = document.getElementById('productArt');
+    art.textContent = p.art;
+    art.className = 'detail-art ' + p.artClass;
+    document.getElementById('productTag').textContent = p.tag;
+    document.getElementById('productTitle').textContent = p.title;
+    document.getElementById('productDescription').textContent = p.description;
+    document.getElementById('productDetails').innerHTML = p.details.map(x=>'<div>'+x+'</div>').join('');
+    openModal(productModal);
+  }
+
+  document.querySelectorAll('[data-product]').forEach(card=>{
+    card.addEventListener('click',()=>showProduct(card.dataset.product));
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter' || e.key===' ') {
+        e.preventDefault();
+        showProduct(card.dataset.product);
+      }
+    });
+  });
+
   document.getElementById('demoForm').addEventListener('submit',e=>{
-    e.preventDefault(); document.getElementById('success').style.display='block'; e.target.reset();
+    e.preventDefault();
+    document.getElementById('success').style.display='block';
+    e.target.reset();
   });
+
   document.getElementById('loginForm').addEventListener('submit',e=>{
-    e.preventDefault(); document.getElementById('loginSuccess').style.display='block';
+    e.preventDefault();
+    document.getElementById('loginSuccess').style.display='block';
   });
-  const menu=document.getElementById('mobileMenu');
-  const links=document.querySelector('.navlinks');
+
+  const menu = document.getElementById('mobileMenu');
+  const links = document.querySelector('.navlinks');
+
   menu.addEventListener('click',()=>{
-    const open=links.style.display==='flex';
-    links.style.display=open?'none':'flex';
-    if(!open){links.style.position='absolute';links.style.top='68px';links.style.left='4%';links.style.right='4%';links.style.background='white';links.style.padding='18px';links.style.border='1px solid var(--line)';links.style.borderRadius='18px';links.style.flexDirection='column';links.style.alignItems='flex-start';links.style.boxShadow='var(--shadow)'}
+    const open = links.style.display === 'flex';
+    links.style.display = open ? 'none' : 'flex';
+    if(!open){
+      links.style.position='absolute';
+      links.style.top='68px';
+      links.style.left='4%';
+      links.style.right='4%';
+      links.style.background='white';
+      links.style.padding='18px';
+      links.style.border='1px solid var(--line)';
+      links.style.borderRadius='18px';
+      links.style.flexDirection='column';
+      links.style.alignItems='flex-start';
+      links.style.boxShadow='var(--shadow)';
+    }
   });
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=900) links.style.display='none'}));
+
+  links.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      if(window.innerWidth<=900) links.style.display='none';
+    });
+  });
 })();
 </script>
 </body>
